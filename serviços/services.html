@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Esconde a lista de categorias inicialmente */
+        #categorias-list {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleCategorias() {
+            const categoriasList = document.getElementById('categorias-list');
+            categoriasList.style.display = categoriasList.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white py-5">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Serviços Nexus</h1>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6 relative">
+                    <li>
+                        <button id="toggle-categorias" class="hover:underline" onmouseover="toggleCategorias()">Categorias</button>
+                        <div id="categorias-list" class="absolute bg-white shadow-lg rounded-lg p-4 mt-1 z-10">
+                            <div class="grid grid-cols-1 gap-2">
+                                <div class="categoria bg-gray-200 p-2 rounded-lg cursor-pointer hover:bg-gray-300">Design</div>
+                                <div class="categoria bg-gray-200 p-2 rounded-lg cursor-pointer hover:bg-gray-300">Programação</div>
+                                <div class="categoria bg-gray-200 p-2 rounded-lg cursor-pointer hover:bg-gray-300">Marketing</div>
+                                <!-- Adicione mais categorias conforme necessário -->
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="criar.html" class="hover:underline">Criar Serviço</a></li>
+                    <li><a href="meus_servicos.html" class="hover:underline">Meus Serviços</a></li>
+                    <li><a href="contratar.html" class="hover:underline">Contratar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-8 bg-white p-6 rounded-lg shadow">
+        <section id="servicos" class="mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Serviços mais utilizados</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
+                    <img src="imagem1.jpg" alt="Serviço 1" class="w-full h-32 object-cover rounded-t-lg">
+                    <h3 class="text-xl font-bold mt-2">Serviço 1</h3>
+                    <p class="mt-2">Descrição breve do serviço 1.</p>
+                    <p class="mt-2 font-bold">Preço: R$ 100,00</p>
+                    <a href="servico1.html" class="mt-4 block bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition duration-300">Ver Detalhes</a>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
+                    <img src="imagem2.jpg" alt="Serviço 2" class="w-full h-32 object-cover rounded-t-lg">
+                    <h3 class="text-xl font-bold mt-2">Serviço 2</h3>
+                    <p class="mt-2">Descrição breve do serviço 2.</p>
+                    <p class="mt-2 font-bold">Preço: R$ 200,00</p>
+                    <a href="servico2.html" class="mt-4 block bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition duration-300">Ver Detalhes</a>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
+                    <img src="imagem3.jpg" alt="Serviço 3" class="w-full h-32 object-cover rounded-t-lg">
+                    <h3 class="text-xl font-bold mt-2">Serviço 3</h3>
+                    <p class="mt-2">Descrição breve do serviço 3.</p>
+                    <p class="mt-2 font-bold">Preço: R$ 150,00</p>
+                    <a href="servico3.html" class="mt-4 block bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition duration-300">Ver Detalhes</a>
+                </div>
+                <!-- Adicione mais serviços conforme necessário -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white text-center py-4">
+        <p>&copy; 2024 Marketplace de Serviços</p>
+    </footer>
+</body>
+</html>
